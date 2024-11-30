@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: jetty-runner.jar
+    destination: /home/ec2-user/simple-java-project
+hooks:
+  BeforeInstall:
+    - location: scripts/start_server.sh
+      timeout: 300
+      runas: root
