@@ -2,8 +2,10 @@
 
 echo "Installing dependencies..."
 sudo yum update
-sudo yum install java-11-openjdk
+sudo amazon-linux-extras enable corretto8
+sudo yum install java-1.8.0-amazon-corretto -y
 sudo yum install maven
+sudo yum install gradle -y
 
 echo "Starting Java application..."
 sudo systemctl start simple-java-project
